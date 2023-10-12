@@ -8,7 +8,7 @@ android {
     namespace = "com.example.learncompose"
     compileSdk = 34
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
     }
     defaultConfig {
         applicationId = "com.example.learncompose"

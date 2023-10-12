@@ -10,22 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.learncompose.databinding.TestBinding
 import com.example.learncompose.ui.theme.LearnComposeTheme
 
 class MainActivity : ComponentActivity() {
+    private lateinit var binding: TestBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = TestBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContent {
-            LearnComposeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
+        setContentView(binding.root)
     }
 }
 
